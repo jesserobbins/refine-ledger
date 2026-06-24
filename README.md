@@ -31,11 +31,13 @@ silently re-arguing a decision the next agent run can't see.
 
 ## Requirements
 
-This skill assumes the **`roborev` CLI** and its `/roborev-refine` command are
-installed and configured. roborev is the loop runner this discipline sits on top
-of — the ledger is keyed to roborev's job ids, agent names, and Pass/Fail
-verdicts. Without roborev, the methodology still reads, but the commands won't
-run.
+This skill builds on **[roborev](https://roborev.io)** — continuous code review
+for AI coding agents — and its `/roborev-refine` loop. roborev is the loop runner
+this discipline sits on top of: the ledger is keyed to roborev's job ids, agent
+names, and Pass/Fail verdicts. Install it first (see the
+[roborev installation guide](https://roborev.io/installation/) and
+[quick start](https://roborev.io/quickstart/)); without it, the methodology still
+reads, but the commands in this skill won't run.
 
 ## Installation
 

@@ -26,11 +26,13 @@ If the loop is one quick iteration, this skill is overhead. Skip it.
 
 ## Requirements
 
-This skill assumes the `roborev` CLI and its `/roborev-refine` command are
-installed and configured — it is the loop runner this discipline sits on top
-of, and the ledger is keyed to roborev's job ids, agent names, and Pass/Fail
-verdicts. Without roborev, the ledger discipline still reads as a methodology,
-but the commands in this skill won't run.
+This skill assumes [roborev](https://roborev.io) — continuous code review for AI
+coding agents — and its `/roborev-refine` command are installed and configured.
+roborev is the loop runner this discipline sits on top of, and the ledger is
+keyed to roborev's job ids, agent names, and Pass/Fail verdicts. See the
+[installation guide](https://roborev.io/installation/) to set it up; without
+roborev, the ledger discipline still reads as a methodology, but the commands in
+this skill won't run.
 
 ## Reviewers are subscription-backed agents
 
