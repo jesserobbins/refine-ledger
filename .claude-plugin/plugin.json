@@ -1,0 +1,12 @@
+{
+  "name": "refine-ledger",
+  "description": "Discipline for tracking a multi-iteration roborev refine loop in a private ledger — detect regressions, repeats, and loops; defend deliberate pushback; handle a reviewer going offline; decide when to stop.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jesse Robbins"
+  },
+  "homepage": "https://github.com/jesserobbins/refine-ledger",
+  "repository": "https://github.com/jesserobbins/refine-ledger.git",
+  "license": "MIT",
+  "keywords": ["roborev", "code-review", "refine", "ledger", "convergence"]
+}
