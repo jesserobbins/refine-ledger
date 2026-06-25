@@ -1,10 +1,10 @@
-# refine-ledger
+# Robo Refine and Polish
 
 A Claude Code skill that keeps a long [`roborev`](#requirements) refine loop
 honest.
 
-`/roborev-refine` runs the review → fix → re-review cycle. **refine-ledger** is
-the bookkeeping that turns that cycle into a *converging* process: a private
+`/roborev-refine` runs the review → fix → re-review cycle. **Robo Refine and
+Polish** is the bookkeeping that turns that cycle into a *converging* process: a private
 ledger that tracks every finding across iterations and reviewers, so you can
 tell a regression from a repeat from a loop, defend a deliberate design call
 without re-litigating it every iteration, handle a reviewer going offline
@@ -45,12 +45,12 @@ This repo is its own plugin marketplace, so install it in two steps — add the
 marketplace, then install the plugin:
 
 ```sh
-/plugin marketplace add jesserobbins/refine-ledger
-/plugin install refine-ledger@refine-ledger
+/plugin marketplace add jesserobbins/refine-and-polish
+/plugin install refine-and-polish@refine-and-polish
 ```
 
 The skill then activates automatically when you run a multi-iteration roborev
-refine loop, or you can invoke it explicitly with `/refine-ledger`.
+refine loop, or you can invoke it explicitly with `/refine-and-polish`.
 
 ## Usage
 
@@ -61,7 +61,7 @@ skill walks you through creating the ledger, typing each finding, planning each
 iteration before you run it, and writing an honest closing when the loop
 converges or hits its budget.
 
-See [`skills/refine-ledger/SKILL.md`](./skills/refine-ledger/SKILL.md) for the
+See [`skills/refine-and-polish/SKILL.md`](./skills/refine-and-polish/SKILL.md) for the
 full discipline.
 
 ## License

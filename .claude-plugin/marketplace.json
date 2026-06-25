@@ -1,5 +1,5 @@
 {
-  "name": "refine-ledger",
+  "name": "refine-and-polish",
   "owner": {
     "name": "Jesse Robbins",
     "email": "jesse.robbins@openaid.org"
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "refine-ledger",
+      "name": "refine-and-polish",
       "source": "./",
       "description": "Track a multi-iteration roborev refine loop in a private ledger — detect regressions, repeats, and loops; defend deliberate pushback; handle a reviewer going offline; decide when to stop."
     }

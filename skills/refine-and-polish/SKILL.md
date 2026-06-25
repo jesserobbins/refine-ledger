@@ -1,9 +1,9 @@
 ---
-name: refine-ledger
+name: refine-and-polish
 description: A discipline for tracking a multi-iteration roborev refine loop in a private ledger so you can detect regressions, repeats, and loops, defend deliberate pushback, handle a reviewer going offline, and decide when to stop. Use whenever running roborev refine for more than a couple of iterations, especially with multiple subscription-backed reviewers (claude-code + codex + pi), and ALWAYS when the user says "loop until convergent", "address every finding", "track progress", "iterate to convergence", or asks for budget/extension reasoning. Layer on top of /roborev-refine — that skill runs the loop; this one supplies the discipline that keeps a long loop honest.
 ---
 
-# refine-ledger
+# Robo Refine and Polish
 
 A long roborev refine loop without bookkeeping is how you end up "fixing" the
 same finding three times, missing a regression you introduced two iterations
