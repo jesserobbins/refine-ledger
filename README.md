@@ -49,8 +49,9 @@ marketplace, then install the plugin:
 /plugin install refine-and-polish@refine-and-polish
 ```
 
-The skill then activates automatically when you run a multi-iteration roborev
-refine loop, or you can invoke it explicitly with `/refine-and-polish`.
+The skill activates automatically when relevant — when you run a multi-iteration
+roborev refine loop — and you can also invoke it explicitly with
+`/refine-and-polish:refine-and-polish` (plugin skills are namespaced by plugin).
 
 ## Usage
 
