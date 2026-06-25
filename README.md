@@ -1,6 +1,6 @@
 # Robo Refine and Polish
 
-A Claude Code skill that keeps a long [`roborev`](#requirements) refine loop
+A Claude Code skill that keeps a long [`roborev`](https://roborev.io) refine loop
 honest.
 
 `/roborev-refine` runs the review → fix → re-review cycle. **Robo Refine and
