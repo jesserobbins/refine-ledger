@@ -1,5 +1,11 @@
 # Robo Refine and Polish
 
+> **Status: `0.0.1-alpha`.** Early release. The discipline is real and
+> battle-tested in practice, but the packaging is new: the two-step install
+> below follows the documented plugin-marketplace flow and matches working
+> plugins, but hasn't been run end-to-end by a fresh user yet. Expect rough
+> edges in the plumbing, not the method. Feedback welcome.
+
 A Claude Code skill that keeps a long [`roborev`](https://roborev.io) refine loop
 honest.
 
@@ -53,6 +59,35 @@ The skill activates automatically when relevant — when you run a multi-iterati
 roborev refine loop — and you can also invoke it explicitly with
 `/refine-and-polish:refine-and-polish` (plugin skills are namespaced by plugin).
 
+## Quickstart: your first loop
+
+Once installed, a two-reviewer loop looks like this. The skill drives these
+steps; you don't have to memorize them.
+
+```sh
+# 1. See which subscription reviewers are live — record them in the ledger header.
+roborev check-agents
+
+# 2. Create the ledger (private notes — never committed to a public repo):
+#    header, convergence criterion, an empty table. The skill writes this for you.
+
+# 3. Iteration 1 — run each reviewer as its own job, same scope:
+roborev review --branch --agent claude-code --wait
+roborev review --branch --agent codex --wait
+
+# 4. Add one row per finding to the ledger and TYPE each one
+#    (NEW / REGRESSION / REPEAT / LOOP). Fix what's real; defend what isn't.
+
+# 5. Before each next iteration, write the "Iter N plan" — predict the run.
+#    Re-review, update the table, check the convergence criterion. Repeat.
+```
+
+You stop when an iteration produces zero findings outside the deliberate-pushback
+list — or when you hit your iteration budget and caption the remaining Low tail
+honestly. See the [worked example](./docs/example-ledger.md) for a real
+three-iteration loop with a filled-in ledger, a pushback entry, and an honest
+convergence caption.
+
 ## Usage
 
 Use it whenever a refine loop will run for more than a couple of iterations —
@@ -62,8 +97,20 @@ skill walks you through creating the ledger, typing each finding, planning each
 iteration before you run it, and writing an honest closing when the loop
 converges or hits its budget.
 
-See [`skills/refine-and-polish/SKILL.md`](./skills/refine-and-polish/SKILL.md) for the
-full discipline.
+For the full discipline, read
+[`skills/refine-and-polish/SKILL.md`](./skills/refine-and-polish/SKILL.md); for a
+filled-in loop, read the [worked example](./docs/example-ledger.md).
+
+## Known limitations (alpha)
+
+- **Install not yet verified end-to-end.** The two-step marketplace install
+  matches the documented flow and working plugins, but no fresh user has run it
+  start to finish. If `/plugin install` misbehaves, that's the most likely spot.
+- **roborev is required.** This is a discipline *on top of* roborev, not a
+  standalone tool — see [Requirements](#requirements).
+- **The discipline assumes subscription-backed reviewers.** It deliberately
+  refuses to route a downed reviewer through an API key; if your setup is
+  API-key-only, the "reviewer unavailable" handling won't match your situation.
 
 ## License
 
